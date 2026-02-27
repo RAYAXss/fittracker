@@ -1,0 +1,53 @@
+# ── Python ────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# ── Virtual Environment ────────────────────────────────
+venv/
+env/
+.venv/
+.env/
+ENV/
+
+# ── Flask / App ────────────────────────────────────────
+instance/
+.webassets-cache
+
+# ── Données utilisateur (NE PAS versionner) ────────────
+data/logs.json
+data/fittracker_export.xlsx
+
+# Les exercices et programmes par défaut PEUVENT être
+# versionnés si tu veux les partager :
+# data/exercises.json
+# data/programs.json
+
+# ── IDE ────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Env vars ───────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Distribution / Build ───────────────────────────────
+dist/
+build/
+*.egg-info/
+*.egg
+MANIFEST
+
+# ── Tests ─────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/

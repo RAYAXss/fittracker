@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>FitTracker</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.27.1/plotly.min.js"></script>
+</head>
+<body>
+<div class="app-shell">
+
+  <!-- ══ SIDEBAR — desktop ════════════════════════════════════ -->
+  <nav class="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text">FitTracker</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" class="nav-link active" data-page="dashboard"><span class="nav-icon">📊</span><span>Dashboard</span></a></li>
+      <li><a href="#" class="nav-link" data-page="workout">        <span class="nav-icon">🏋️</span><span>Séance du Jour</span></a></li>
+      <li><a href="#" class="nav-link" data-page="programs">       <span class="nav-icon">📋</span><span>Programmes</span></a></li>
+      <li><a href="#" class="nav-link" data-page="exercises">      <span class="nav-icon">💪</span><span>Exercices</span></a></li>
+      <li><a href="#" class="nav-link" data-page="history">        <span class="nav-icon">📅</span><span>Historique</span></a></li>
+      <li><a href="#" class="nav-link" data-page="records">        <span class="nav-icon">🏆</span><span>Records</span></a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <button class="btn-export" onclick="exportExcel()">⬇ Export Excel</button>
+    </div>
+  </nav>
+
+  <!-- ══ MAIN ═════════════════════════════════════════════════ -->
+  <main class="main-content">
+
+    <!-- ── DASHBOARD ──────────────────────────────────────── -->
+    <section class="page active" id="page-dashboard">
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">DASHBOARD</h1>
+          <p class="page-sub" id="today-date"></p>
+        </div>
+        <button class="btn-primary" onclick="showPage('workout')">+ Nouvelle séance</button>
+      </div>
+
+      <button class="mobile-export-btn" onclick="exportExcel()">⬇ Exporter Excel</button>
+
+      <div class="kpi-grid">
+        <div class="kpi-card"><div class="kpi-icon">🔥</div><div class="kpi-value" id="kpi-month">—</div><div class="kpi-label">Séances ce mois</div></div>
+        <div class="kpi-card"><div class="kpi-icon">⚡</div><div class="kpi-value" id="kpi-week">—</div><div class="kpi-label">Cette semaine</div></div>
+        <div class="kpi-card"><div class="kpi-icon">📦</div><div class="kpi-value" id="kpi-volume">—</div><div class="kpi-label">Volume total</div></div>
+        <div class="kpi-card"><div class="kpi-icon">🏆</div><div class="kpi-value" id="kpi-prs">—</div><div class="kpi-label">Records</div></div>
+      </div>
+
+      <div class="charts-grid">
+        <div class="chart-card wide"><div id="chart-weekly" style="height:250px"></div></div>
+        <div class="chart-card"><div id="chart-muscle" style="height:280px"></div></div>
+        <div class="chart-card"><div id="chart-heatmap" style="height:280px"></div></div>
+      </div>
+
+      <div class="section-header">
+        <h2>Progression par Exercice</h2>
+        <select id="progress-ex-select" class="select-input" style="width:260px" onchange="loadProgressChart()">
+          <option value="">-- Choisir un exercice --</option>
+        </select>
+      </div>
+      <div class="chart-card wide" style="margin-bottom:24px">
+        <div id="chart-progress" style="height:320px"></div>
+      </div>
+
+      <div class="section-header"><h2>Records Personnels</h2></div>
+      <div class="chart-card wide" style="margin-bottom:24px">
+        <div id="chart-pr-bars" style="min-height:280px"></div>
+      </div>
+
+      <div class="section-header"><h2>Activité Récente</h2></div>
+      <div id="recent-logs" class="log-list"></div>
+    </section>
+
+    <!-- ── SÉANCE DU JOUR ──────────────────────────────────── -->
+    <section class="page" id="page-workout">
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">SÉANCE</h1>
+          <p class="page-sub" id="workout-date-display"></p>
+        </div>
+      </div>
+      <div id="workout-setup" class="workout-setup">
+        <h3>Configurer la séance</h3>
+        <div class="program-session-picker">
+          <div class="form-group">
+            <label>Programme</label>
+            <select id="workout-program-select" class="select-input" onchange="loadWorkoutSessions()">
+              <option value="">-- Programme --</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Séance</label>
+            <select id="workout-session-select" class="select-input">
+              <option value="">-- Séance --</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Date</label>
+            <input type="date" id="workout-date-input" class="select-input">
+          </div>
+        </div>
+        <button class="btn-primary" onclick="startWorkout()">🚀 Commencer</button>
+      </div>
+      <div id="workout-active" class="hidden">
+        <div class="workout-info-bar">
+          <span id="workout-session-name"></span>
+          <span class="workout-timer" id="workout-timer">⏱ 00:00</span>
+          <button class="btn-danger" onclick="finishWorkout()">✅ Terminer & Sauvegarder</button>
+        </div>
+        <div id="workout-exercises-list" class="exercises-list"></div>
+      </div>
+    </section>
+
+    <!-- ── PROGRAMMES ─────────────────────────────────────── -->
+    <section class="page" id="page-programs">
+      <div class="page-header">
+        <div><h1 class="page-title">PROGRAMMES</h1></div>
+        <button class="btn-primary" onclick="openModal('modal-program')">+ Nouveau</button>
+      </div>
+      <div id="programs-grid" class="programs-grid"></div>
+
+      <div class="modal hidden" id="modal-program">
+        <div class="modal-box">
+          <div class="modal-header"><h3>Nouveau Programme</h3><button class="modal-close" onclick="closeModal('modal-program')">✕</button></div>
+          <div class="modal-body">
+            <div class="form-group"><label>Nom</label><input type="text" id="prog-name" class="input-field" placeholder="Mon programme..."></div>
+            <div class="form-group"><label>Description</label><input type="text" id="prog-desc" class="input-field" placeholder="Description..."></div>
+            <div class="form-group"><label>Séances / semaine</label><input type="number" id="prog-spw" class="input-field" value="3" min="1" max="7"></div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn-secondary" onclick="closeModal('modal-program')">Annuler</button>
+            <button class="btn-primary" onclick="saveProgram()">Créer</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal hidden" id="modal-program-detail">
+        <div class="modal-box modal-large">
+          <div class="modal-header"><h3 id="detail-prog-name">Programme</h3><button class="modal-close" onclick="closeModal('modal-program-detail')">✕</button></div>
+          <div class="modal-body">
+            <div id="detail-sessions"></div>
+            <div class="add-session-form">
+              <h4>+ Ajouter une séance</h4>
+              <div class="form-row">
+                <input type="text" id="new-session-name" class="input-field" placeholder="Nom de la séance">
+                <select id="new-session-day" class="select-input">
+                  <option value="">Jour (optionnel)</option>
+                  <option>Lundi</option><option>Mardi</option><option>Mercredi</option>
+                  <option>Jeudi</option><option>Vendredi</option><option>Samedi</option><option>Dimanche</option>
+                </select>
+                <button class="btn-primary" onclick="addSession()">Ajouter</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal hidden" id="modal-add-exercise">
+        <div class="modal-box">
+          <div class="modal-header"><h3>Ajouter un exercice</h3><button class="modal-close" onclick="closeModal('modal-add-exercise')">✕</button></div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>Catégorie</label>
+              <select id="filter-cat" class="select-input" onchange="filterExercisesModal()">
+                <option value="">Tous</option>
+                <option value="machine">⚙️ Machine</option>
+                <option value="free_weight">🏋️ Haltères / Barre</option>
+                <option value="bodyweight">🤸 Poids de corps</option>
+                <option value="calisthenics">🌟 Calisthenics</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Exercice</label><select id="add-ex-select" class="select-input"></select></div>
+            <div class="form-row">
+              <div class="form-group"><label>Sets</label><input type="number" id="add-ex-sets" class="input-field" value="3" min="1"></div>
+              <div class="form-group"><label>Reps cibles</label><input type="text" id="add-ex-reps" class="input-field" value="8-12"></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn-secondary" onclick="closeModal('modal-add-exercise')">Annuler</button>
+            <button class="btn-primary" onclick="saveExerciseToSession()">Ajouter</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EXERCICES ───────────────────────────────────────── -->
+    <section class="page" id="page-exercises">
+      <div class="page-header">
+        <div><h1 class="page-title">EXERCICES</h1></div>
+        <button class="btn-primary" onclick="openModal('modal-exercise')">+ Custom</button>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterExercises(this,'')">Tous</button>
+        <button class="filter-btn" onclick="filterExercises(this,'free_weight')">🏋️ Haltères</button>
+        <button class="filter-btn" onclick="filterExercises(this,'machine')">⚙️ Machine</button>
+        <button class="filter-btn" onclick="filterExercises(this,'bodyweight')">🤸 Corps</button>
+        <button class="filter-btn" onclick="filterExercises(this,'calisthenics')">🌟 Calisthenics</button>
+      </div>
+      <div id="exercises-grid" class="exercises-grid"></div>
+
+      <div class="modal hidden" id="modal-exercise">
+        <div class="modal-box">
+          <div class="modal-header"><h3>Nouvel Exercice</h3><button class="modal-close" onclick="closeModal('modal-exercise')">✕</button></div>
+          <div class="modal-body">
+            <div class="form-group"><label>Nom</label><input type="text" id="ex-name" class="input-field"></div>
+            <div class="form-group"><label>Groupe musculaire</label><input type="text" id="ex-muscle" class="input-field" placeholder="Ex: Pectoraux"></div>
+            <div class="form-group"><label>Catégorie</label>
+              <select id="ex-cat" class="select-input">
+                <option value="free_weight">Haltères / Barre</option>
+                <option value="machine">Machine</option>
+                <option value="bodyweight">Poids de corps</option>
+                <option value="calisthenics">Calisthenics</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Description</label><input type="text" id="ex-desc" class="input-field"></div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn-secondary" onclick="closeModal('modal-exercise')">Annuler</button>
+            <button class="btn-primary" onclick="saveExercise()">Créer</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HISTORIQUE ──────────────────────────────────────── -->
+    <section class="page" id="page-history">
+      <div class="page-header"><div><h1 class="page-title">HISTORIQUE</h1></div></div>
+      <div id="history-list" class="log-list"></div>
+    </section>
+
+    <!-- ── RECORDS ────────────────────────────────────────── -->
+    <section class="page" id="page-records">
+      <div class="page-header"><div><h1 class="page-title">RECORDS</h1></div></div>
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterRecords(this,'')">Tous</button>
+        <button class="filter-btn" onclick="filterRecords(this,'free_weight')">🏋️ Haltères</button>
+        <button class="filter-btn" onclick="filterRecords(this,'machine')">⚙️ Machine</button>
+        <button class="filter-btn" onclick="filterRecords(this,'bodyweight')">🤸 Corps</button>
+        <button class="filter-btn" onclick="filterRecords(this,'calisthenics')">🌟 Calisthenics</button>
+      </div>
+      <div id="records-grid" class="records-grid"></div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ══ BOTTOM NAV — mobile ══════════════════════════════════════ -->
+<nav class="bottom-nav">
+  <div class="bottom-nav-inner">
+    <button class="bnav-item active" data-page="dashboard"  onclick="showPage('dashboard')"> <span class="bnav-icon">📊</span><span class="bnav-label">Stats</span></button>
+    <button class="bnav-item"        data-page="workout"    onclick="showPage('workout')">   <span class="bnav-icon">🏋️</span><span class="bnav-label">Séance</span></button>
+    <button class="bnav-item"        data-page="programs"   onclick="showPage('programs')">  <span class="bnav-icon">📋</span><span class="bnav-label">Progs</span></button>
+    <button class="bnav-item"        data-page="exercises"  onclick="showPage('exercises')"> <span class="bnav-icon">💪</span><span class="bnav-label">Exos</span></button>
+    <button class="bnav-item"        data-page="records"    onclick="showPage('records')">   <span class="bnav-icon">🏆</span><span class="bnav-label">Records</span></button>
+    <button class="bnav-item"        data-page="history"    onclick="showPage('history')">   <span class="bnav-icon">📅</span><span class="bnav-label">Historique</span></button>
+  </div>
+</nav>
+
+<!-- Toast -->
+<div class="toast hidden" id="toast"></div>
+
+<!-- Tooltip desktop -->
+<div class="ex-tooltip" id="ex-tooltip">
+  <div class="tooltip-img-wrap" id="tooltip-img-wrap">
+    <div class="tooltip-img-loading" id="tooltip-img-loading"><div class="spinner"></div></div>
+    <img id="tooltip-img" src="" alt="" style="display:none" onload="tooltipImgLoaded()" onerror="tooltipImgError()">
+    <div class="tooltip-img-placeholder hidden" id="tooltip-img-placeholder">
+      <div class="ph-icon">💪</div><span>Pas d'image disponible</span>
+    </div>
+  </div>
+  <div class="tooltip-body">
+    <div class="tooltip-name" id="tooltip-name"></div>
+    <div class="tooltip-tags" id="tooltip-tags"></div>
+    <div class="tooltip-desc" id="tooltip-desc"></div>
+    <div class="tooltip-tips" id="tooltip-tips">
+      <div class="tooltip-tips-label">💡 Conseil</div>
+      <div class="tooltip-tips-text" id="tooltip-tips-text"></div>
+    </div>
+    <div class="tooltip-secondary" id="tooltip-secondary"></div>
+  </div>
+</div>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>
