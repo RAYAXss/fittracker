@@ -1,0 +1,640 @@
+[
+  {
+    "id": "57a53c11",
+    "name": "Full Body 3j/semaine",
+    "description": "Programme complet 3 séances par semaine, idéal débutant/intermédiaire",
+    "sessions_per_week": 3,
+    "is_custom": false,
+    "created_at": "2026-02-26",
+    "sessions": [
+      {
+        "id": "a44eb3e4",
+        "name": "Séance A — Push",
+        "day_of_week": "Lundi",
+        "exercises": [
+          {
+            "id": "5acbb0ff",
+            "exercise_id": "20932ca3",
+            "sets": 4,
+            "target_reps": "8-10"
+          },
+          {
+            "id": "8ad1d539",
+            "exercise_id": "08f9f125",
+            "sets": 3,
+            "target_reps": "10-12"
+          },
+          {
+            "id": "5b1476a4",
+            "exercise_id": "156261e0",
+            "sets": 3,
+            "target_reps": "Max"
+          },
+          {
+            "id": "5b4c6b41",
+            "exercise_id": "ab7093ab",
+            "sets": 3,
+            "target_reps": "12-15"
+          },
+          {
+            "id": "7b1ce213",
+            "exercise_id": "a8e420e2",
+            "sets": 3,
+            "target_reps": "12-15"
+          }
+        ]
+      },
+      {
+        "id": "ee75c890",
+        "name": "Séance B — Pull",
+        "day_of_week": "Mercredi",
+        "exercises": [
+          {
+            "id": "09bb92b0",
+            "exercise_id": "4cb5f666",
+            "sets": 4,
+            "target_reps": "Max"
+          },
+          {
+            "id": "72eedb0a",
+            "exercise_id": "29892ed8",
+            "sets": 3,
+            "target_reps": "10-12"
+          },
+          {
+            "id": "1e7ad6d3",
+            "exercise_id": "700537c5",
+            "sets": 3,
+            "target_reps": "10-12"
+          },
+          {
+            "id": "d54d7016",
+            "exercise_id": "7646f9f2",
+            "sets": 3,
+            "target_reps": "10-12"
+          },
+          {
+            "id": "d930fc53",
+            "exercise_id": "2f517320",
+            "sets": 3,
+            "target_reps": "15-20"
+          }
+        ]
+      },
+      {
+        "id": "ccb99817",
+        "name": "Séance C — Legs",
+        "day_of_week": "Vendredi",
+        "exercises": [
+          {
+            "id": "c6d514c2",
+            "exercise_id": "ac1f0a2d",
+            "sets": 4,
+            "target_reps": "8-10"
+          },
+          {
+            "id": "82633069",
+            "exercise_id": "d9452d99",
+            "sets": 3,
+            "target_reps": "12-15"
+          },
+          {
+            "id": "5141eebe",
+            "exercise_id": "daccf23e",
+            "sets": 3,
+            "target_reps": "10-12"
+          },
+          {
+            "id": "5256a1d3",
+            "exercise_id": "7a21ed53",
+            "sets": 3,
+            "target_reps": "12-15"
+          },
+          {
+            "id": "c6f018c0",
+            "exercise_id": "1cf3699a",
+            "sets": 4,
+            "target_reps": "15-20"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ce301d23",
+    "name": "PPL 6j/semaine",
+    "description": "Push Pull Legs 6 jours, niveau intermédiaire / avancé",
+    "sessions_per_week": 6,
+    "is_custom": false,
+    "created_at": "2026-02-26",
+    "sessions": [
+      {
+        "id": "5ebccf6d",
+        "name": "Push A",
+        "day_of_week": "Lundi",
+        "exercises": [
+          {
+            "id": "51690c1d",
+            "exercise_id": "20932ca3",
+            "sets": 4,
+            "target_reps": "6-8"
+          },
+          {
+            "id": "047c0766",
+            "exercise_id": "20a4b6e2",
+            "sets": 3,
+            "target_reps": "10-12"
+          },
+          {
+            "id": "2165957e",
+            "exercise_id": "ce61dc62",
+            "sets": 3,
+            "target_reps": "12-15"
+          },
+          {
+            "id": "49dd8602",
+            "exercise_id": "08f9f125",
+            "sets": 3,
+            "target_reps": "8-10"
+          },
+          {
+            "id": "740527ab",
+            "exercise_id": "ab7093ab",
+            "sets": 4,
+            "target_reps": "12-15"
+          },
+          {
+            "id": "135c80a5",
+            "exercise_id": "4db1fb25",
+            "sets": 3,
+            "target_reps": "10-12"
+          }
+        ]
+      },
+      {
+        "id": "0d099618",
+        "name": "Pull A",
+        "day_of_week": "Mardi",
+        "exercises": [
+          {
+            "id": "13a48280",
+            "exercise_id": "854fbebb",
+            "sets": 4,
+            "target_reps": "5-6"
+          },
+          {
+            "id": "93c9801d",
+            "exercise_id": "4cb5f666",
+            "sets": 4,
+            "target_reps": "Max"
+          },
+          {
+            "id": "f2386fc6",
+            "exercise_id": "f9ccf997",
+            "sets": 3,
+            "target_reps": "8-10"
+          },
+          {
+            "id": "890ba49e",
+            "exercise_id": "700537c5",
+            "sets": 3,
+            "target_reps": "10-12"
+          },
+          {
+            "id": "07afd72c",
+            "exercise_id": "7646f9f2",
+            "sets": 3,
+            "target_reps": "10-12"
+          },
+          {
+            "id": "46bdc931",
+            "exercise_id": "95d036e4",
+            "sets": 3,
+            "target_reps": "12-15"
+          }
+        ]
+      },
+      {
+        "id": "a28caf43",
+        "name": "Legs A",
+        "day_of_week": "Mercredi",
+        "exercises": [
+          {
+            "id": "06052928",
+            "exercise_id": "ac1f0a2d",
+            "sets": 5,
+            "target_reps": "5-8"
+          },
+          {
+            "id": "5fe1d4cd",
+            "exercise_id": "d9452d99",
+            "sets": 3,
+            "target_reps": "12-15"
+          },
+          {
+            "id": "28094056",
+            "exercise_id": "daccf23e",
+            "sets": 3,
+            "target_reps": "10"
+          },
+          {
+            "id": "0eaca933",
+            "exercise_id": "7a21ed53",
+            "sets": 3,
+            "target_reps": "12"
+          },
+          {
+            "id": "d71105c3",
+            "exercise_id": "1cf3699a",
+            "sets": 5,
+            "target_reps": "15"
+          }
+        ]
+      },
+      {
+        "id": "1493908d",
+        "name": "Push B",
+        "day_of_week": "Jeudi",
+        "exercises": [
+          {
+            "id": "4e1e23b4",
+            "exercise_id": "f5628746",
+            "sets": 4,
+            "target_reps": "8-10"
+          },
+          {
+            "id": "248cd1ea",
+            "exercise_id": "156261e0",
+            "sets": 4,
+            "target_reps": "10-12"
+          },
+          {
+            "id": "feb118d0",
+            "exercise_id": "2539ed0a",
+            "sets": 3,
+            "target_reps": "15"
+          },
+          {
+            "id": "93aa99c9",
+            "exercise_id": "cdff3bce",
+            "sets": 3,
+            "target_reps": "10-12"
+          },
+          {
+            "id": "9d2499ff",
+            "exercise_id": "1eb44327",
+            "sets": 3,
+            "target_reps": "12-15"
+          },
+          {
+            "id": "83a0d8bc",
+            "exercise_id": "4e740091",
+            "sets": 3,
+            "target_reps": "12"
+          }
+        ]
+      },
+      {
+        "id": "55b5c4ce",
+        "name": "Pull B",
+        "day_of_week": "Vendredi",
+        "exercises": [
+          {
+            "id": "8d190178",
+            "exercise_id": "29892ed8",
+            "sets": 4,
+            "target_reps": "10-12"
+          },
+          {
+            "id": "439ac686",
+            "exercise_id": "2f517320",
+            "sets": 4,
+            "target_reps": "15-20"
+          },
+          {
+            "id": "0a6defde",
+            "exercise_id": "c7a19fce",
+            "sets": 3,
+            "target_reps": "12"
+          },
+          {
+            "id": "79aac47c",
+            "exercise_id": "5ec98e8f",
+            "sets": 3,
+            "target_reps": "12-15"
+          },
+          {
+            "id": "a0305d26",
+            "exercise_id": "0cea86da",
+            "sets": 3,
+            "target_reps": "12"
+          }
+        ]
+      },
+      {
+        "id": "98c5463d",
+        "name": "Legs B",
+        "day_of_week": "Samedi",
+        "exercises": [
+          {
+            "id": "4df9e656",
+            "exercise_id": "8d2e5f4d",
+            "sets": 4,
+            "target_reps": "12"
+          },
+          {
+            "id": "6764ba50",
+            "exercise_id": "78c51dde",
+            "sets": 4,
+            "target_reps": "12-15"
+          },
+          {
+            "id": "9e755391",
+            "exercise_id": "65d8f8dc",
+            "sets": 3,
+            "target_reps": "15"
+          },
+          {
+            "id": "51bf6e9a",
+            "exercise_id": "7a21ed53",
+            "sets": 3,
+            "target_reps": "15"
+          },
+          {
+            "id": "3a949377",
+            "exercise_id": "4f94868f",
+            "sets": 5,
+            "target_reps": "20"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "e4214259",
+    "name": "Calisthenics Débutant",
+    "description": "Street workout — construire les bases pour les figures avancées",
+    "sessions_per_week": 3,
+    "is_custom": false,
+    "created_at": "2026-02-26",
+    "sessions": [
+      {
+        "id": "770e656d",
+        "name": "Fondamentaux Push",
+        "day_of_week": "Lundi",
+        "exercises": [
+          {
+            "id": "20f3f0a3",
+            "exercise_id": "a072b6c7",
+            "sets": 4,
+            "target_reps": "Max"
+          },
+          {
+            "id": "b7ab8805",
+            "exercise_id": "156261e0",
+            "sets": 4,
+            "target_reps": "Max"
+          },
+          {
+            "id": "c36e1de8",
+            "exercise_id": "f5431348",
+            "sets": 3,
+            "target_reps": "8-10"
+          },
+          {
+            "id": "99ec39b4",
+            "exercise_id": "65bacb02",
+            "sets": 3,
+            "target_reps": "30-60s"
+          }
+        ]
+      },
+      {
+        "id": "1074e1ce",
+        "name": "Fondamentaux Pull",
+        "day_of_week": "Mercredi",
+        "exercises": [
+          {
+            "id": "f2862233",
+            "exercise_id": "4cb5f666",
+            "sets": 5,
+            "target_reps": "Max"
+          },
+          {
+            "id": "faf621b4",
+            "exercise_id": "d518ab19",
+            "sets": 3,
+            "target_reps": "6-8"
+          },
+          {
+            "id": "f234b47e",
+            "exercise_id": "2d095190",
+            "sets": 4,
+            "target_reps": "20-30s"
+          },
+          {
+            "id": "0d64b5de",
+            "exercise_id": "dc84facf",
+            "sets": 4,
+            "target_reps": "15"
+          }
+        ]
+      },
+      {
+        "id": "5a2b748a",
+        "name": "Figures & Force",
+        "day_of_week": "Vendredi",
+        "exercises": [
+          {
+            "id": "a3cbd6ef",
+            "exercise_id": "8c9e1ab9",
+            "sets": 4,
+            "target_reps": "Max"
+          },
+          {
+            "id": "6e0d69fb",
+            "exercise_id": "93b8ff87",
+            "sets": 3,
+            "target_reps": "8-10"
+          },
+          {
+            "id": "1e17a16b",
+            "exercise_id": "ac1f0a2d",
+            "sets": 4,
+            "target_reps": "20"
+          },
+          {
+            "id": "227c6073",
+            "exercise_id": "8d2e5f4d",
+            "sets": 3,
+            "target_reps": "15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "82abc853",
+    "name": "Upper / Lower 4j/semaine",
+    "description": "Haut / Bas du corps, 4 séances, force + hypertrophie",
+    "sessions_per_week": 4,
+    "is_custom": false,
+    "created_at": "2026-02-26",
+    "sessions": [
+      {
+        "id": "13874608",
+        "name": "Upper A — Force",
+        "day_of_week": "Lundi",
+        "exercises": [
+          {
+            "id": "b190fcc3",
+            "exercise_id": "20932ca3",
+            "sets": 4,
+            "target_reps": "5-6"
+          },
+          {
+            "id": "36556d26",
+            "exercise_id": "4cb5f666",
+            "sets": 4,
+            "target_reps": "6-8"
+          },
+          {
+            "id": "3fcefa30",
+            "exercise_id": "08f9f125",
+            "sets": 3,
+            "target_reps": "6-8"
+          },
+          {
+            "id": "9e4c294b",
+            "exercise_id": "f9ccf997",
+            "sets": 3,
+            "target_reps": "6-8"
+          },
+          {
+            "id": "a88d37e9",
+            "exercise_id": "b531149d",
+            "sets": 3,
+            "target_reps": "8-10"
+          }
+        ]
+      },
+      {
+        "id": "1070a180",
+        "name": "Lower A — Force",
+        "day_of_week": "Mardi",
+        "exercises": [
+          {
+            "id": "28a0aa08",
+            "exercise_id": "ac1f0a2d",
+            "sets": 5,
+            "target_reps": "5"
+          },
+          {
+            "id": "e983d776",
+            "exercise_id": "daccf23e",
+            "sets": 3,
+            "target_reps": "8"
+          },
+          {
+            "id": "c1af2c24",
+            "exercise_id": "d9452d99",
+            "sets": 3,
+            "target_reps": "10"
+          },
+          {
+            "id": "a999befb",
+            "exercise_id": "7a21ed53",
+            "sets": 3,
+            "target_reps": "10"
+          },
+          {
+            "id": "28b4dacd",
+            "exercise_id": "1cf3699a",
+            "sets": 4,
+            "target_reps": "12"
+          }
+        ]
+      },
+      {
+        "id": "938a027c",
+        "name": "Upper B — Hypertrophie",
+        "day_of_week": "Jeudi",
+        "exercises": [
+          {
+            "id": "afad910b",
+            "exercise_id": "20a4b6e2",
+            "sets": 4,
+            "target_reps": "10-12"
+          },
+          {
+            "id": "48058663",
+            "exercise_id": "700537c5",
+            "sets": 4,
+            "target_reps": "10-12"
+          },
+          {
+            "id": "c2344906",
+            "exercise_id": "ce61dc62",
+            "sets": 3,
+            "target_reps": "12-15"
+          },
+          {
+            "id": "d6da1e9a",
+            "exercise_id": "29892ed8",
+            "sets": 3,
+            "target_reps": "12"
+          },
+          {
+            "id": "df0b5bb8",
+            "exercise_id": "7646f9f2",
+            "sets": 3,
+            "target_reps": "12"
+          },
+          {
+            "id": "f7578824",
+            "exercise_id": "a8e420e2",
+            "sets": 3,
+            "target_reps": "12"
+          }
+        ]
+      },
+      {
+        "id": "5350fd62",
+        "name": "Lower B — Hypertrophie",
+        "day_of_week": "Vendredi",
+        "exercises": [
+          {
+            "id": "59fc1986",
+            "exercise_id": "d9452d99",
+            "sets": 4,
+            "target_reps": "12-15"
+          },
+          {
+            "id": "adece305",
+            "exercise_id": "8d2e5f4d",
+            "sets": 3,
+            "target_reps": "12"
+          },
+          {
+            "id": "d8b326a7",
+            "exercise_id": "65d8f8dc",
+            "sets": 3,
+            "target_reps": "15"
+          },
+          {
+            "id": "71af3f60",
+            "exercise_id": "78c51dde",
+            "sets": 3,
+            "target_reps": "12-15"
+          },
+          {
+            "id": "85e55e0d",
+            "exercise_id": "4f94868f",
+            "sets": 4,
+            "target_reps": "20"
+          }
+        ]
+      }
+    ]
+  }
+]

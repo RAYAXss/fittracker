@@ -1,0 +1,450 @@
+[
+  {
+    "id": "20932ca3",
+    "name": "Développé couché",
+    "muscle_group": "Pectoraux",
+    "category": "free_weight",
+    "description": "Bench press barre",
+    "is_custom": false
+  },
+  {
+    "id": "20a4b6e2",
+    "name": "Développé incliné haltères",
+    "muscle_group": "Pectoraux",
+    "category": "free_weight",
+    "description": "Incline dumbbell press",
+    "is_custom": false
+  },
+  {
+    "id": "ce61dc62",
+    "name": "Écarté haltères",
+    "muscle_group": "Pectoraux",
+    "category": "free_weight",
+    "description": "Dumbbell fly",
+    "is_custom": false
+  },
+  {
+    "id": "23bf8050",
+    "name": "Pec Deck Machine",
+    "muscle_group": "Pectoraux",
+    "category": "machine",
+    "description": "Butterfly machine",
+    "is_custom": false
+  },
+  {
+    "id": "f5628746",
+    "name": "Chest Press Machine",
+    "muscle_group": "Pectoraux",
+    "category": "machine",
+    "description": "Presse pectoraux",
+    "is_custom": false
+  },
+  {
+    "id": "2539ed0a",
+    "name": "Cable Crossover",
+    "muscle_group": "Pectoraux",
+    "category": "machine",
+    "description": "Croisé poulie",
+    "is_custom": false
+  },
+  {
+    "id": "156261e0",
+    "name": "Dips",
+    "muscle_group": "Pectoraux",
+    "category": "bodyweight",
+    "description": "Dips barres parallèles",
+    "is_custom": false
+  },
+  {
+    "id": "a072b6c7",
+    "name": "Pompes",
+    "muscle_group": "Pectoraux",
+    "category": "bodyweight",
+    "description": "Push-ups",
+    "is_custom": false
+  },
+  {
+    "id": "4cb5f666",
+    "name": "Tractions",
+    "muscle_group": "Dos",
+    "category": "bodyweight",
+    "description": "Pull-ups / Chin-ups",
+    "is_custom": false
+  },
+  {
+    "id": "29892ed8",
+    "name": "Rowing haltère",
+    "muscle_group": "Dos",
+    "category": "free_weight",
+    "description": "One arm dumbbell row",
+    "is_custom": false
+  },
+  {
+    "id": "854fbebb",
+    "name": "Soulevé de terre",
+    "muscle_group": "Dos",
+    "category": "free_weight",
+    "description": "Deadlift",
+    "is_custom": false
+  },
+  {
+    "id": "f9ccf997",
+    "name": "Rowing barre",
+    "muscle_group": "Dos",
+    "category": "free_weight",
+    "description": "Barbell row",
+    "is_custom": false
+  },
+  {
+    "id": "700537c5",
+    "name": "Lat Pulldown",
+    "muscle_group": "Dos",
+    "category": "machine",
+    "description": "Tirage vertical",
+    "is_custom": false
+  },
+  {
+    "id": "c7a19fce",
+    "name": "Rowing assis machine",
+    "muscle_group": "Dos",
+    "category": "machine",
+    "description": "Seated cable row",
+    "is_custom": false
+  },
+  {
+    "id": "2f517320",
+    "name": "Face Pull",
+    "muscle_group": "Dos",
+    "category": "machine",
+    "description": "Face pull poulie",
+    "is_custom": false
+  },
+  {
+    "id": "08f9f125",
+    "name": "Développé militaire",
+    "muscle_group": "Épaules",
+    "category": "free_weight",
+    "description": "Overhead press barre",
+    "is_custom": false
+  },
+  {
+    "id": "ab7093ab",
+    "name": "Élévations latérales",
+    "muscle_group": "Épaules",
+    "category": "free_weight",
+    "description": "Lateral raises",
+    "is_custom": false
+  },
+  {
+    "id": "1eb44327",
+    "name": "Élévations frontales",
+    "muscle_group": "Épaules",
+    "category": "free_weight",
+    "description": "Front raises",
+    "is_custom": false
+  },
+  {
+    "id": "cdff3bce",
+    "name": "Arnold Press",
+    "muscle_group": "Épaules",
+    "category": "free_weight",
+    "description": "Arnold dumbbell press",
+    "is_custom": false
+  },
+  {
+    "id": "313dc0b2",
+    "name": "Shoulder Press Machine",
+    "muscle_group": "Épaules",
+    "category": "machine",
+    "description": "Presse épaules",
+    "is_custom": false
+  },
+  {
+    "id": "7646f9f2",
+    "name": "Curl barre",
+    "muscle_group": "Biceps",
+    "category": "free_weight",
+    "description": "Barbell curl",
+    "is_custom": false
+  },
+  {
+    "id": "0cea86da",
+    "name": "Curl haltères",
+    "muscle_group": "Biceps",
+    "category": "free_weight",
+    "description": "Dumbbell curl",
+    "is_custom": false
+  },
+  {
+    "id": "95d036e4",
+    "name": "Curl marteau",
+    "muscle_group": "Biceps",
+    "category": "free_weight",
+    "description": "Hammer curl",
+    "is_custom": false
+  },
+  {
+    "id": "5ec98e8f",
+    "name": "Curl poulie basse",
+    "muscle_group": "Biceps",
+    "category": "machine",
+    "description": "Cable curl",
+    "is_custom": false
+  },
+  {
+    "id": "4db1fb25",
+    "name": "Skull Crusher",
+    "muscle_group": "Triceps",
+    "category": "free_weight",
+    "description": "French press couché",
+    "is_custom": false
+  },
+  {
+    "id": "4e740091",
+    "name": "Extension au-dessus tête",
+    "muscle_group": "Triceps",
+    "category": "free_weight",
+    "description": "Overhead tricep extension",
+    "is_custom": false
+  },
+  {
+    "id": "6f0530a9",
+    "name": "Dips triceps",
+    "muscle_group": "Triceps",
+    "category": "bodyweight",
+    "description": "Dips banc",
+    "is_custom": false
+  },
+  {
+    "id": "a8e420e2",
+    "name": "Extension poulie haute",
+    "muscle_group": "Triceps",
+    "category": "machine",
+    "description": "Tricep pushdown",
+    "is_custom": false
+  },
+  {
+    "id": "ac1f0a2d",
+    "name": "Squat",
+    "muscle_group": "Jambes",
+    "category": "free_weight",
+    "description": "Back squat barre",
+    "is_custom": false
+  },
+  {
+    "id": "d9452d99",
+    "name": "Leg Press",
+    "muscle_group": "Jambes",
+    "category": "machine",
+    "description": "Presse à jambes",
+    "is_custom": false
+  },
+  {
+    "id": "65d8f8dc",
+    "name": "Leg Extension",
+    "muscle_group": "Jambes",
+    "category": "machine",
+    "description": "Extension jambes",
+    "is_custom": false
+  },
+  {
+    "id": "7a21ed53",
+    "name": "Leg Curl couché",
+    "muscle_group": "Jambes",
+    "category": "machine",
+    "description": "Leg curl machine",
+    "is_custom": false
+  },
+  {
+    "id": "daccf23e",
+    "name": "Romanian Deadlift",
+    "muscle_group": "Jambes",
+    "category": "free_weight",
+    "description": "Soulevé de terre roumain",
+    "is_custom": false
+  },
+  {
+    "id": "8d2e5f4d",
+    "name": "Fentes",
+    "muscle_group": "Jambes",
+    "category": "free_weight",
+    "description": "Lunges haltères",
+    "is_custom": false
+  },
+  {
+    "id": "78c51dde",
+    "name": "Hip Thrust",
+    "muscle_group": "Fessiers",
+    "category": "free_weight",
+    "description": "Hip thrust barre",
+    "is_custom": false
+  },
+  {
+    "id": "1cf3699a",
+    "name": "Mollets debout machine",
+    "muscle_group": "Mollets",
+    "category": "machine",
+    "description": "Standing calf raise",
+    "is_custom": false
+  },
+  {
+    "id": "4f94868f",
+    "name": "Mollets assis machine",
+    "muscle_group": "Mollets",
+    "category": "machine",
+    "description": "Seated calf raise",
+    "is_custom": false
+  },
+  {
+    "id": "247b4674",
+    "name": "Crunch",
+    "muscle_group": "Abdominaux",
+    "category": "bodyweight",
+    "description": "Crunch classique",
+    "is_custom": false
+  },
+  {
+    "id": "65bacb02",
+    "name": "Planche",
+    "muscle_group": "Abdominaux",
+    "category": "bodyweight",
+    "description": "Plank",
+    "is_custom": false
+  },
+  {
+    "id": "dc84facf",
+    "name": "Relevé de jambes",
+    "muscle_group": "Abdominaux",
+    "category": "bodyweight",
+    "description": "Leg raises",
+    "is_custom": false
+  },
+  {
+    "id": "7f672351",
+    "name": "Russian Twist",
+    "muscle_group": "Abdominaux",
+    "category": "bodyweight",
+    "description": "Russian twist",
+    "is_custom": false
+  },
+  {
+    "id": "09971a3f",
+    "name": "Crunch poulie haute",
+    "muscle_group": "Abdominaux",
+    "category": "machine",
+    "description": "Cable crunch",
+    "is_custom": false
+  },
+  {
+    "id": "8c9e1ab9",
+    "name": "Muscle Up",
+    "muscle_group": "Full Body",
+    "category": "calisthenics",
+    "description": "Tractions + dips enchaînés",
+    "is_custom": false
+  },
+  {
+    "id": "051712df",
+    "name": "Front Lever",
+    "muscle_group": "Dos",
+    "category": "calisthenics",
+    "description": "Levier avant statique",
+    "is_custom": false
+  },
+  {
+    "id": "1d67ed45",
+    "name": "Back Lever",
+    "muscle_group": "Dos",
+    "category": "calisthenics",
+    "description": "Levier arrière statique",
+    "is_custom": false
+  },
+  {
+    "id": "3f5cd6b4",
+    "name": "Planche (figure)",
+    "muscle_group": "Épaules",
+    "category": "calisthenics",
+    "description": "Planche avancée",
+    "is_custom": false
+  },
+  {
+    "id": "8110a737",
+    "name": "Human Flag",
+    "muscle_group": "Full Body",
+    "category": "calisthenics",
+    "description": "Drapeau humain",
+    "is_custom": false
+  },
+  {
+    "id": "2d095190",
+    "name": "L-Sit",
+    "muscle_group": "Abdominaux",
+    "category": "calisthenics",
+    "description": "L-sit statique",
+    "is_custom": false
+  },
+  {
+    "id": "93b8ff87",
+    "name": "Dragon Flag",
+    "muscle_group": "Abdominaux",
+    "category": "calisthenics",
+    "description": "Dragon flag",
+    "is_custom": false
+  },
+  {
+    "id": "f5431348",
+    "name": "Pseudo Planche Push Up",
+    "muscle_group": "Pectoraux",
+    "category": "calisthenics",
+    "description": "Push-up pseudo planche",
+    "is_custom": false
+  },
+  {
+    "id": "d518ab19",
+    "name": "Archer Pull Up",
+    "muscle_group": "Dos",
+    "category": "calisthenics",
+    "description": "Tractions archer",
+    "is_custom": false
+  },
+  {
+    "id": "4394bec1",
+    "name": "Handstand Push Up",
+    "muscle_group": "Épaules",
+    "category": "calisthenics",
+    "description": "HSPU — développé sur les mains",
+    "is_custom": false
+  },
+  {
+    "id": "81ea3563",
+    "name": "One Arm Pull Up",
+    "muscle_group": "Dos",
+    "category": "calisthenics",
+    "description": "Traction un bras",
+    "is_custom": false
+  },
+  {
+    "id": "452b0819",
+    "name": "Explosive Pull Up",
+    "muscle_group": "Dos",
+    "category": "calisthenics",
+    "description": "Tractions explosives",
+    "is_custom": false
+  },
+  {
+    "id": "5571b4e9",
+    "name": "Tractions lestées",
+    "muscle_group": "Dos",
+    "category": "calisthenics",
+    "description": "Pull-ups avec poids",
+    "is_custom": false
+  },
+  {
+    "id": "b531149d",
+    "name": "Dips lestés",
+    "muscle_group": "Triceps",
+    "category": "calisthenics",
+    "description": "Dips avec poids",
+    "is_custom": false
+  }
+]
